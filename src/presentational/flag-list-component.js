@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router";
 import CountryFlag from "./flag-component";
 
-const CountryFlagList = props => {
+const CountryFlagList = props => (
   <div className="countries-list">
     {props.countries.map((item) => {
       return (
@@ -10,10 +10,11 @@ const CountryFlagList = props => {
           <Link className="logo" to={"countries/country/" + item.id}>
             <CountryFlag country={item} />
           </Link>
+          <button onClick={props.deleteCountry.bind(null, item.id)}>DELETE</button>
         </div>
       )
     })}
   </div>
-};
+);
 
 export default CountryFlagList;
