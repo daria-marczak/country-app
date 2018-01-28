@@ -10,6 +10,13 @@ export const getCountries = () => {
   }
 }
 
+export const getCountry = (id) => {
+  return {
+    type: GET_COUNTRY,
+    id
+  }
+}
+
 export const deleteCountry = (id) => {
   return {
     type: DELETE_COUNTRY,
