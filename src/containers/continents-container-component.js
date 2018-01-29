@@ -39,8 +39,8 @@ class ContinentsContainer extends Component {
   }
 }
 
-const mapStateToProps = store => {
+const mapStateToProps = store => ({
   visibleCountries: store.countriesReducer.visibleCountries
-}
+});
 
 export default connect(mapStateToProps)(ContinentsContainer);
